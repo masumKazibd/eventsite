@@ -1,1 +1,16 @@
-<p>navbar.component works!</p>
+<nav class="border-b bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+    <a routerLink="/" class="font-bold tracking-tight">EventName</a>
+
+    <div class="hidden md:flex gap-4 text-sm">
+      <a routerLink="/conference" routerLinkActive="font-semibold">Conference</a>
+      <a routerLink="/ctf" routerLinkActive="font-semibold">CTF</a>
+      <a routerLink="/schedule" routerLinkActive="font-semibold">Schedule</a>
+      <a routerLink="/speakers" routerLinkActive="font-semibold">Speakers</a>
+      <a routerLink="/sponsors" routerLinkActive="font-semibold">Sponsors</a>
+      <a routerLink="/venue" routerLinkActive="font-semibold">Venue</a>
+      <a routerLink="/faq" routerLinkActive="font-semibold">FAQ</a>
+      <a routerLink="/contact" routerLinkActive="font-semibold">Contact</a>
+    </div>
+  </div>
+</nav>
