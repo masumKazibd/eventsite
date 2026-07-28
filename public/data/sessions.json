@@ -1,0 +1,95 @@
+{
+  "days": [
+    {
+      "id": "day-1",
+      "title": "Day 1: Recon & Keynotes",
+      "date": "Oct 15, 2026",
+      "events": [
+        {
+          "time": "09:00 AM",
+          "track": "Conference",
+          "type": "Keynote",
+          "title": "The Future of Web Application Firewalls",
+          "speakerId": "spk-01",
+          "speakerName": "Jane Doe",
+          "keyPoint": "Evasion techniques against modern AI-driven WAFs.",
+          "highlighted": true
+        },
+        {
+          "time": "11:00 AM",
+          "track": "CTF",
+          "type": "Challenge Release",
+          "title": "Flag 1: Network Packet Analysis",
+          "speakerId": "spk-03",
+          "speakerName": "Alice Chen",
+          "keyPoint": "Download the PCAP and find the hidden payload.",
+          "highlighted": false
+        },
+        {
+          "time": "02:00 PM",
+          "track": "Conference",
+          "type": "Session",
+          "title": "Advanced Active Directory Exploitation",
+          "speakerId": "spk-02",
+          "speakerName": "John Smith",
+          "keyPoint": "Lateral movement bypassing modern EDRs.",
+          "highlighted": false
+        }
+      ]
+    },
+    {
+      "id": "day-2",
+      "title": "Day 2: Exploitation & Bounties",
+      "date": "Oct 16, 2026",
+      "events": [
+        {
+          "time": "10:00 AM",
+          "track": "Conference",
+          "type": "Session",
+          "title": "Maximizing Bug Bounty Returns",
+          "speakerId": "spk-01",
+          "speakerName": "Jane Doe",
+          "keyPoint": "How to write vulnerability reports that guarantee maximum payouts.",
+          "highlighted": true
+        },
+        {
+          "time": "01:00 PM",
+          "track": "CTF",
+          "type": "Challenge Release",
+          "title": "Flag 2: Cryptography & Reverse Engineering",
+          "speakerId": "spk-03",
+          "speakerName": "Alice Chen",
+          "keyPoint": "Decompile the binary and reverse the custom encryption.",
+          "highlighted": true
+        }
+      ]
+    },
+    {
+      "id": "day-3",
+      "title": "Day 3: Defense & Awards",
+      "date": "Oct 17, 2026",
+      "events": [
+        {
+          "time": "10:30 AM",
+          "track": "Conference",
+          "type": "Session",
+          "title": "Incident Response: Post-Ransomware",
+          "speakerId": "spk-02",
+          "speakerName": "John Smith",
+          "keyPoint": "Cleaning up and restoring infrastructure safely after an attack.",
+          "highlighted": false
+        },
+        {
+          "time": "04:00 PM",
+          "track": "Conference",
+          "type": "Keynote",
+          "title": "Closing Ceremony & CTF Winners",
+          "speakerId": null,
+          "speakerName": "Event Organizers",
+          "keyPoint": "Awarding the top hackers and recognizing Platinum sponsors.",
+          "highlighted": true
+        }
+      ]
+    }
+  ]
+}

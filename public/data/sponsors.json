@@ -1,0 +1,36 @@
+{
+  "platinum": [
+    {
+      "id": "spon-01",
+      "name": "BugHunt",
+      "url": "https://bughunt.info/",
+      "logo": "assets/images/sponsors/bughunt.svg",
+      "tagline": "The premier Bug Bounty platform for vulnerability management."
+    },
+    {
+      "id": "spon-02",
+      "name": "Phoenix Summit",
+      "url": "https://phoenixsummit.net/",
+      "logo": "assets/images/sponsors/phoenix.svg",
+      "tagline": "Bangladesh's flagship cybersecurity convergence platform."
+    }
+  ],
+  "gold": [
+    {
+      "id": "spon-03",
+      "name": "DefendNet Systems",
+      "url": "https://example.com",
+      "logo": "assets/images/sponsors/defendnet.svg",
+      "tagline": "Enterprise firewall and threat intelligence solutions."
+    }
+  ],
+  "silver": [
+    {
+      "id": "spon-04",
+      "name": "ZeroDay Collective",
+      "url": "https://example.com",
+      "logo": "assets/images/sponsors/zeroday.svg",
+      "tagline": "Community-driven offensive security research."
+    }
+  ]
+}
