@@ -6,6 +6,7 @@
     "company": "BugHunt",
     "avatar": "assets/images/speakers/jane-doe.jpg",
     "bio": "Jane specializes in network enumeration, Wireshark packet analysis, and identifying zero-day vulnerabilities in enterprise web application firewalls.",
+    "highlighted": true,
     "social": {
       "twitter": "https://twitter.com/janedoe_sec",
       "github": "https://github.com/janedoe-sec"
@@ -30,6 +31,7 @@
     "company": "ZeroDay Collective",
     "avatar": "assets/images/speakers/alice-chen.jpg",
     "bio": "Alice designs elite, multi-stage CTF environments. She is an expert in reverse engineering malware and cryptography challenges.",
+    "highlighted": true,
     "social": {
       "twitter": "https://twitter.com/alice_crypto",
       "github": "https://github.com/alicechen"
