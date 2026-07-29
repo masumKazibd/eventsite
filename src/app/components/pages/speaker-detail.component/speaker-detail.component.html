@@ -1,1 +1,32 @@
-<p>speaker-detail.component works!</p>
+<section class="space-y-8">
+  <a routerLink="/speakers" class="inline-flex text-sm font-semibold text-sky-700">← Back to speakers</a>
+
+  @if (speaker(); as item) {
+    <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+      <div class="flex flex-col gap-6 md:flex-row md:items-start">
+        <img [src]="item.avatar" [alt]="item.name" class="h-28 w-28 rounded-full border border-slate-200 object-cover" />
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-700">Speaker profile</p>
+          <h1 class="mt-2 text-3xl font-bold text-slate-900">{{ item.name }}</h1>
+          <p class="mt-2 text-lg text-slate-600">{{ item.role }} · {{ item.company }}</p>
+          <p class="mt-4 max-w-3xl text-slate-700">{{ item.bio }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-semibold text-slate-900">Related sessions</h2>
+      <div class="mt-5 grid gap-4 lg:grid-cols-2">
+        @for (event of relatedEvents; track event.title) {
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+            <p class="text-sm font-semibold text-slate-500">{{ event.time }} · {{ event.track }}</p>
+            <h3 class="mt-2 text-lg font-semibold text-slate-900">{{ event.title }}</h3>
+            <p class="mt-2 text-sm text-slate-700">{{ event.keyPoint }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  } @else {
+    <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm text-slate-600">Speaker not found.</div>
+  }
+</section>
