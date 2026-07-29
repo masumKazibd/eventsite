@@ -1,1 +1,44 @@
-<p>speaker-card.component works!</p>
+@if (speaker; as item) {
+  <article
+    class="rounded-xl border bg-white p-4 shadow-sm"
+    [class.border-sky-200]="featured || item.highlighted"
+    [class.bg-sky-50]="featured || item.highlighted"
+  >
+    <img
+      [src]="item.avatar"
+      [alt]="item.name"
+      class="mb-3 h-20 w-20 rounded-full border border-slate-200 object-cover"
+      loading="lazy"
+    />
+
+    @if (featured || item.highlighted) {
+      <p class="mb-2 inline-block rounded-full bg-sky-100 px-2 py-1 text-xs font-medium text-sky-700">
+        Highlighted speaker
+      </p>
+    }
+
+    <h3 class="text-lg font-semibold text-slate-900">{{ item.name }}</h3>
+    <p class="text-sm text-slate-600">{{ item.role }} · {{ item.company }}</p>
+    <p class="mt-3 text-sm text-slate-700">{{ item.bio }}</p>
+
+    @if (item.social) {
+      <div class="mt-3 flex flex-wrap gap-3 text-sm">
+        @if (item.social.twitter) {
+          <a [href]="item.social.twitter" class="text-sky-700 hover:underline" target="_blank" rel="noopener noreferrer">
+            Twitter
+          </a>
+        }
+        @if (item.social.github) {
+          <a [href]="item.social.github" class="text-sky-700 hover:underline" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        }
+        @if (item.social.linkedin) {
+          <a [href]="item.social.linkedin" class="text-sky-700 hover:underline" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        }
+      </div>
+    }
+  </article>
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SessionEvent } from '../../../../models/schedule.model';
 
 @Component({
   selector: 'app-event-card.component',
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './event-card.component.html',
   styleUrl: './event-card.component.css',
 })
-export class EventCardComponent {}
+export class EventCardComponent {
+  @Input() event: SessionEvent | null = null;
+  @Input() showTrack = true;
+}
