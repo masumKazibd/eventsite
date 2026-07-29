@@ -1,40 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
-
-type Speaker = {
-  id: string;
-  name: string;
-  role: string;
-  company: string;
-  avatar: string;
-  bio: string;
-  social?: { twitter?: string; github?: string; linkedin?: string };
-};
-
-type Sessions = {
-  days: Array<{
-    id: string;
-    title: string;
-    date: string;
-    events: Array<{
-      time: string;
-      track: 'Conference' | 'CTF' | string;
-      type: string;
-      title: string;
-      speakerId: string | null;
-      speakerName: string;
-      keyPoint: string;
-      highlighted: boolean;
-    }>;
-  }>;
-};
-
-type Sponsors = {
-  platinum: Array<{ id: string; name: string; url: string; logo: string; tagline: string }>;
-  gold: Array<{ id: string; name: string; url: string; logo: string; tagline: string }>;
-  silver: Array<{ id: string; name: string; url: string; logo: string; tagline: string }>;
-};
+import { Speaker } from '../models/speaker.model';
+import { Sessions } from '../models/schedule.model';
+import { Sponsors } from '../models/sponsor.model';
 
 @Injectable({ providedIn: 'root' })
 export class EventDataService {
