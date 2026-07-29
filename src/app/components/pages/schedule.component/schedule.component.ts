@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { EventDataService } from '../../../services/event-data.service';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-schedule.component',
@@ -6,4 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './schedule.component.html',
   styleUrl: './schedule.component.css',
 })
-export class ScheduleComponent {}
+export class ScheduleComponent {
+  private eventData = inject(EventDataService);
+  sessions = toSignal(this.eventData.getSessions(), { initialValue: null });
+}

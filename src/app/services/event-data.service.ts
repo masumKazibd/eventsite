@@ -12,7 +12,7 @@ type Speaker = {
   social?: { twitter?: string; github?: string; linkedin?: string };
 };
 
-type SessionsJson = {
+type Sessions = {
   days: Array<{
     id: string;
     title: string;
@@ -30,7 +30,7 @@ type SessionsJson = {
   }>;
 };
 
-type SponsorsJson = {
+type Sponsors = {
   platinum: Array<{ id: string; name: string; url: string; logo: string; tagline: string }>;
   gold: Array<{ id: string; name: string; url: string; logo: string; tagline: string }>;
   silver: Array<{ id: string; name: string; url: string; logo: string; tagline: string }>;
@@ -41,7 +41,7 @@ export class EventDataService {
   constructor(private http: HttpClient) {}
 
   getSpeakers() {
-    return this.http.get<Speaker[]>('/assets/data/speakers.json');
+    return this.http.get<Speaker[]>('/data/speakers.json');
   }
 
   getSpeakerById(id: string) {
@@ -49,10 +49,10 @@ export class EventDataService {
   }
 
   getSessions() {
-    return this.http.get<SessionsJson>('/assets/data/sessions.json');
+    return this.http.get<Sessions>('/data/sessions.json');
   }
 
   getSponsors() {
-    return this.http.get<SponsorsJson>('/assets/data/sponsors.json');
+    return this.http.get<Sponsors>('/data/sponsors.json');
   }
 }
