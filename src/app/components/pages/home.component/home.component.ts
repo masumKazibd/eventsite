@@ -14,6 +14,7 @@ import { SponsorGridComponent } from '../../shared/ui/sponsor-grid.component/spo
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
+  
   private readonly eventData = inject(EventDataService);
 
   private readonly emptyEventMeta: EventMeta = {
@@ -32,7 +33,10 @@ export class HomeComponent {
   readonly sessions = toSignal(this.eventData.getSessions(), { initialValue: null });
   readonly speakers = toSignal(this.eventData.getSpeakers(), { initialValue: [] });
   readonly sponsors = toSignal(this.eventData.getSponsors(), { initialValue: null });
-
+   
+  slugify(value: string): string {
+    return value.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  }
   get featuredSessions() {
     const data = this.sessions();
     if (!data) {
@@ -41,8 +45,8 @@ export class HomeComponent {
 
     return data.days.flatMap(day => day.events.filter(event => event.highlighted));
   }
-
+ 
   get featuredSpeakers() {
-    return this.speakers().filter(speaker => speaker.highlighted).slice(0, 3);
+    return this.speakers().filter(speaker => speaker.highlighted).slice(0, 4);
   }
 }

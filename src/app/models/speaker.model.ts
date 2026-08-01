@@ -12,5 +12,5 @@ export interface Speaker {
   avatar: string;
   bio: string;
   highlighted?: boolean;
-  social?: SpeakerSocial;
+  social?: { twitter?: string; github?: string; linkedin?: string };
 }
