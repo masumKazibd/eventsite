@@ -4,7 +4,7 @@
     "name": "Jane Doe",
     "role": "Lead Security Researcher",
     "company": "BugHunt",
-    "avatar": "assets/images/speakers/jane-doe.jpg",
+    "avatar": "/speakers/person1.webp",
     "bio": "Jane specializes in network enumeration, Wireshark packet analysis, and identifying zero-day vulnerabilities in enterprise web application firewalls.",
     "highlighted": true,
     "social": {
@@ -17,8 +17,9 @@
     "name": "John Smith",
     "role": "Red Team Commander",
     "company": "Phoenix Summit",
-    "avatar": "assets/images/speakers/john-smith.jpg",
+    "avatar": "/speakers/person2.webp",
     "bio": "John brings 15 years of offensive security experience. He specializes in Active Directory exploitation and mimicking ransomware behavior for enterprise stress tests.",
+    "highlighted": true,
     "social": {
       "twitter": "https://twitter.com/johnsmith_rt",
       "github": "https://github.com/jsmith-red"
@@ -29,12 +30,25 @@
     "name": "Alice Chen",
     "role": "CTF Architect",
     "company": "ZeroDay Collective",
-    "avatar": "assets/images/speakers/alice-chen.jpg",
+    "avatar": "/speakers/person3.webp",
     "bio": "Alice designs elite, multi-stage CTF environments. She is an expert in reverse engineering malware and cryptography challenges.",
     "highlighted": true,
     "social": {
       "twitter": "https://twitter.com/alice_crypto",
       "github": "https://github.com/alicechen"
+    }
+  },
+  {
+    "id": "spk-04",
+    "name": "Bob Johnson",
+    "role": "Incident Responder",
+    "company": "CyberShield",
+    "avatar": "/speakers/person4.webp",
+    "bio": "Bob has extensive experience in managing and mitigating security incidents. He is known for his rapid response capabilities and strategic approach to incident containment.",
+    "highlighted": true,
+    "social": {
+      "twitter": "https://twitter.com/bobjohnson_ir",
+      "github": "https://github.com/bobjohnson"
     }
   }
 ]
