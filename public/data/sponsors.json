@@ -5,14 +5,16 @@
       "name": "BugHunt",
       "url": "https://bughunt.info/",
       "logo": "assets/images/sponsors/bughunt.svg",
-      "tagline": "The premier Bug Bounty platform for vulnerability management."
+      "tagline": "The premier Bug Bounty platform for vulnerability management.",
+      "highlighted": true
     },
     {
       "id": "spon-02",
       "name": "Phoenix Summit",
       "url": "https://phoenixsummit.net/",
       "logo": "assets/images/sponsors/phoenix.svg",
-      "tagline": "Bangladesh's flagship cybersecurity convergence platform."
+      "tagline": "Bangladesh's flagship cybersecurity convergence platform.",
+      "highlighted": true
     }
   ],
   "gold": [

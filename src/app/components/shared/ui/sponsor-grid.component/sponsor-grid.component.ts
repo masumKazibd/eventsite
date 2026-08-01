@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Sponsor, Sponsors, SponsorTierName } from '../../../../models/sponsor.model';
 
 @Component({
-  selector: 'app-sponsor-grid.component',
+  selector: 'app-sponsor-grid',
   imports: [],
   templateUrl: './sponsor-grid.component.html',
   styleUrl: './sponsor-grid.component.css',

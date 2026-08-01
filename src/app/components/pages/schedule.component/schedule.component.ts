@@ -1,14 +1,15 @@
 import { Component, inject } from '@angular/core';
-import { EventDataService } from '../../../services/event-data.service';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { EventDataService } from '../../../services/event-data.service';
+import { EventCardComponent } from '../../shared/ui/event-card.component/event-card.component';
 
 @Component({
   selector: 'app-schedule.component',
-  imports: [],
+  imports: [EventCardComponent],
   templateUrl: './schedule.component.html',
   styleUrl: './schedule.component.css',
 })
 export class ScheduleComponent {
-  private eventData = inject(EventDataService);
-  sessions = toSignal(this.eventData.getSessions(), { initialValue: null });
+  private readonly eventData = inject(EventDataService);
+  readonly sessions = toSignal(this.eventData.getSessions(), { initialValue: null });
 }

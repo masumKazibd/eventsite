@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { SessionEvent } from '../../../../models/schedule.model';
 
 @Component({
-  selector: 'app-event-card.component',
+  selector: 'app-event-card',
   imports: [],
   templateUrl: './event-card.component.html',
   styleUrl: './event-card.component.css',

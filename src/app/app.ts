@@ -7,8 +7,8 @@ import { FooterComponent } from './components/shared/footer.component/footer.com
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('event-site');
+  protected readonly title = signal('Hello, event-site');
 }
