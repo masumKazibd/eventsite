@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { Sponsor, Sponsors, SponsorTierName } from '../../../../models/sponsor.model';
 
 @Component({
@@ -8,8 +8,10 @@ import { Sponsor, Sponsors, SponsorTierName } from '../../../../models/sponsor.m
   styleUrl: './sponsor-grid.component.css',
 })
 export class SponsorGridComponent {
-  @Input() sponsors: Sponsors | null = null;
-  @Input() highlightedSponsorIds: string[] = [];
+  // Modern Angular 22 Signal Inputs
+  readonly sponsors = input<Sponsors | null>(null);
+  readonly highlightedSponsorIds = input<string[]>([]);
+  
   readonly tierOrder: SponsorTierName[] = ['platinum', 'gold', 'silver'];
 
   readonly tierLabels: Record<keyof Sponsors, string> = {
@@ -18,7 +20,7 @@ export class SponsorGridComponent {
     silver: 'Silver Sponsors',
   };
 
-  isHighlighted(sponsor: Sponsor): boolean {
-    return sponsor.highlighted ?? this.highlightedSponsorIds.includes(sponsor.id);
+  isHighlighted(sponsor: Sponsor): boolean { 
+    return sponsor.highlighted ?? this.highlightedSponsorIds().includes(sponsor.id);
   }
 }

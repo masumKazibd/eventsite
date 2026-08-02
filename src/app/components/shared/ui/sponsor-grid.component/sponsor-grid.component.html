@@ -1,33 +1,58 @@
-@if (sponsors; as tiers) {
-  <div class="space-y-6">
+@if (sponsors(); as tiers) {
+  <div class="space-y-12">
     @for (tier of tierOrder; track tier) {
       @if (tiers[tier].length) {
         <section>
-          <h3 class="mb-3 text-xl font-semibold text-slate-900">{{ tierLabels[tier] }}</h3>
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          
+          <!-- Tier Header with styling line -->
+          <div class="flex items-center gap-4 mb-6">
+            <h3 class="text-sm font-bold uppercase tracking-[0.15em] text-slate-400">
+              {{ tierLabels[tier] }}
+            </h3>
+            <div class="h-px flex-1 bg-slate-200"></div>
+          </div>
+          
+          <!-- Sponsor Grid -->
+          <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             @for (sponsor of tiers[tier]; track sponsor.id) {
-              <article
-                class="rounded-xl border bg-white p-4 shadow-sm"
-                [class.border-sky-200]="isHighlighted(sponsor)"
-                [class.bg-sky-50]="isHighlighted(sponsor)"
+              
+              <!-- Entire Card is a clickable link -->
+              <a
+                [href]="sponsor.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative flex flex-col items-center justify-center rounded-2xl border p-8 text-center shadow-sm transition-all hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                [class]="isHighlighted(sponsor) ? 'border-indigo-200 bg-indigo-50/50 hover:border-indigo-300' : 'border-slate-200 bg-white/60 backdrop-blur-sm hover:border-indigo-300'"
               >
+                
+                <!-- Highlight Badge -->
                 @if (isHighlighted(sponsor)) {
-                  <p class="mb-2 inline-block rounded-full bg-sky-100 px-2 py-1 text-xs font-medium text-sky-700">
-                    Highlight sponsor
-                  </p>
+                  <span class="absolute -top-3 right-4 inline-flex items-center gap-1 rounded-full bg-indigo-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest text-indigo-700 border border-indigo-200 shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span> 
+                    Featured
+                  </span>
                 }
 
-                <h4 class="text-lg font-semibold text-slate-900">{{ sponsor.name }}</h4>
-                <p class="mt-1 text-sm text-slate-700">{{ sponsor.tagline }}</p>
-                <a
-                  [href]="sponsor.url"
-                  class="mt-3 inline-block text-sm font-medium text-sky-700 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit sponsor
-                </a>
-              </article>
+                <!-- Logo Rendering (with Grayscale to Color hover effect) -->
+                @if (sponsor.logo) {
+                  <img 
+                    [src]="sponsor.logo" 
+                    [alt]="sponsor.name" 
+                    class="h-14 w-auto object-contain mb-4 filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100" 
+                    loading="lazy" 
+                  />
+                } @else {
+                  <h4 class="text-2xl font-black text-slate-800 mb-4 group-hover:text-indigo-600 transition-colors">
+                    {{ sponsor.name }}
+                  </h4>
+                }
+
+                <!-- Tagline -->
+                <p class="text-xs font-medium text-slate-500 leading-relaxed max-w-[200px]">
+                  {{ sponsor.tagline }}
+                </p>
+              </a>
+
             }
           </div>
         </section>
