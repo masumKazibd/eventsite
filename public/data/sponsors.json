@@ -2,37 +2,37 @@
   "platinum": [
     {
       "id": "spon-01",
-      "name": "BugHunt",
-      "url": "https://bughunt.info/",
-      "logo": "assets/images/sponsors/bughunt.svg",
+      "name": "HackerOne",
+      "url": "https://hackerone.com/",
+      "logo": "/images/sponsors/hackerone.jpg",
       "tagline": "The premier Bug Bounty platform for vulnerability management.",
       "highlighted": true
     },
     {
       "id": "spon-02",
-      "name": "Phoenix Summit",
-      "url": "https://phoenixsummit.net/",
-      "logo": "assets/images/sponsors/phoenix.svg",
-      "tagline": "Bangladesh's flagship cybersecurity convergence platform.",
+      "name": "TryHackMe",
+      "url": "https://tryhackme.com/",
+      "logo": "/images/sponsors/tryhackme.avif",
+      "tagline": "The easiest way to learn cybersecurity.",
       "highlighted": true
     }
   ],
   "gold": [
     {
       "id": "spon-03",
-      "name": "DefendNet Systems",
-      "url": "https://example.com",
-      "logo": "assets/images/sponsors/defendnet.svg",
-      "tagline": "Enterprise firewall and threat intelligence solutions."
+      "name": "CTF Times",
+      "url": "https://ctftimes.com",
+      "logo": "/images/sponsors/ctftime.png",
+      "tagline": "The leading platform for competitive cybersecurity challenges."
     }
   ],
   "silver": [
     {
       "id": "spon-04",
-      "name": "ZeroDay Collective",
-      "url": "https://example.com",
-      "logo": "assets/images/sponsors/zeroday.svg",
-      "tagline": "Community-driven offensive security research."
+      "name": "HacktheBox",
+      "url": "https://hackthebox.com",
+      "logo": "/images/sponsors/hackthebox.jpg",
+      "tagline": "The leading platform for ethical hacking and cybersecurity training."
     }
   ]
 }
