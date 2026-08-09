@@ -1,9 +1,113 @@
-<section class="space-y-8">
+<!-- <section class="space-y-8">
   <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-700">Contact</p>
     <h1 class="mt-3 text-3xl font-bold text-slate-900">Get in Touch</h1>
     <p class="mt-3 max-w-2xl text-slate-600">Have questions or feedback? We'd love to hear from you.</p>
   </div> 
 
-  <!-- <app-sponsor-grid [sponsors]="sponsors()" [highlightedSponsorIds]="['spon-01', 'spon-02']"></app-sponsor-grid> -->
+   
+ </section> -->
+<section class="space-y-10 max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+  
+  <!-- HERO HEADER -->
+  <div class="rounded-3xl border border-slate-200 bg-white p-8 md:p-12 shadow-sm relative overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-72 h-72 bg-indigo-50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+    
+    <div class="relative z-10">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-indigo-600 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Reach Out
+      </p>
+      <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        Get in <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-rose-500">Touch</span>.
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg text-slate-600 leading-relaxed">
+        Have questions about the CTF, need help with registration, or want to sponsor the event? We're here to help.
+      </p>
+    </div>
+  </div>
+
+  <!-- TWO-COLUMN LAYOUT -->
+  <div class="grid gap-8 lg:grid-cols-2 lg:gap-12 items-start">
+    
+    <!-- LEFT COLUMN: CONTACT INFO -->
+    <div class="space-y-6">
+      
+      <!-- Email Card -->
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm flex items-start gap-4 group hover:border-indigo-200 transition-colors">
+        <div class="rounded-lg bg-indigo-50 p-3 text-indigo-600 group-hover:bg-indigo-100 transition-colors">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Email Us</h3>
+          <p class="mt-1 text-slate-600">For general inquiries and sponsor details.</p>
+          <a href="mailto:hello@conference.com" class="mt-2 inline-block font-semibold text-indigo-600 hover:text-indigo-700">hello&#64;conference.com</a>
+        </div>
+      </div>
+
+      <!-- Discord/Community Card -->
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm flex items-start gap-4 group hover:border-indigo-200 transition-colors">
+        <div class="rounded-lg bg-indigo-50 p-3 text-indigo-600 group-hover:bg-indigo-100 transition-colors">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Discord Community</h3>
+          <p class="mt-1 text-slate-600">Join the active CTF chat and find a team.</p>
+          <a href="#" class="mt-2 inline-block font-semibold text-indigo-600 hover:text-indigo-700">Join the server &rarr;</a>
+        </div>
+      </div>
+      
+      <!-- Venue Card -->
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm flex items-start gap-4 group hover:border-indigo-200 transition-colors">
+        <div class="rounded-lg bg-indigo-50 p-3 text-indigo-600 group-hover:bg-indigo-100 transition-colors">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Event Venue</h3>
+          <p class="mt-1 text-slate-600">Phoenix Summit Center<br>Dhaka, Bangladesh</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: CONTACT FORM -->
+    <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Send a Message</h2>
+      
+      <form class="space-y-5" (submit)="onSubmit($event)">
+        <!-- Name & Email Row -->
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="name" class="block text-sm font-semibold text-slate-700 mb-1.5">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" class="w-full rounded-xl border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:bg-white focus:ring-1 focus:ring-indigo-500 outline-none transition-all border" required>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" class="w-full rounded-xl border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:bg-white focus:ring-1 focus:ring-indigo-500 outline-none transition-all border" required>
+          </div>
+        </div>
+
+        <!-- Subject -->
+        <div>
+          <label for="subject" class="block text-sm font-semibold text-slate-700 mb-1.5">Subject</label>
+          <select id="subject" name="subject" class="w-full rounded-xl border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 focus:border-indigo-500 focus:bg-white focus:ring-1 focus:ring-indigo-500 outline-none transition-all border">
+            <option value="general">General Inquiry</option>
+            <option value="sponsorship">Sponsorship Opportunities</option>
+            <option value="ctf">CTF Registration</option>
+          </select>
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block text-sm font-semibold text-slate-700 mb-1.5">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="How can we help you?" class="w-full rounded-xl border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:bg-white focus:ring-1 focus:ring-indigo-500 outline-none transition-all border resize-none" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+  </div>
 </section>
