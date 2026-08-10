@@ -1,4 +1,4 @@
-<nav class="border-b border-slate-200 bg-white/90 backdrop-blur">
+<!-- <nav class="border-b border-slate-200 bg-white/90 backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
     <a routerLink="/" class="text-lg font-semibold tracking-tight text-slate-900">Conference Summit</a>
 
@@ -13,4 +13,78 @@
       <a routerLink="/contact" routerLinkActive="font-semibold text-sky-700" class="text-slate-600">Contact</a>
     </div>
   </div>
+</nav> -->
+
+<nav class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md transition-all">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    
+    <!-- Brand / Logo -->
+    <a routerLink="/" class="flex items-center gap-2 text-xl font-bold tracking-tight text-slate-900 transition-opacity hover:opacity-80">
+      <span class="text-indigo-600">Conference</span> Summit
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a routerLink="/conference" routerLinkActive="text-indigo-600 font-semibold" class="text-slate-600 hover:text-indigo-600 transition-colors">Conference</a>
+      <a routerLink="/ctf" routerLinkActive="text-indigo-600 font-semibold" class="text-slate-600 hover:text-indigo-600 transition-colors">CTF</a>
+      <a routerLink="/schedule" routerLinkActive="text-indigo-600 font-semibold" class="text-slate-600 hover:text-indigo-600 transition-colors">Schedule</a>
+      <a routerLink="/speakers" routerLinkActive="text-indigo-600 font-semibold" class="text-slate-600 hover:text-indigo-600 transition-colors">Speakers</a>
+      <a routerLink="/sponsors" routerLinkActive="text-indigo-600 font-semibold" class="text-slate-600 hover:text-indigo-600 transition-colors">Sponsors</a>
+      <a routerLink="/faq" routerLinkActive="text-indigo-600 font-semibold" class="text-slate-600 hover:text-indigo-600 transition-colors">FAQ</a>
+      <a routerLink="/contact" routerLinkActive="text-indigo-600 font-semibold" class="text-slate-600 hover:text-indigo-600 transition-colors">Contact</a>
+      
+      <!-- Desktop CTA -->
+      <a routerLink="/register" class="ml-2 inline-flex items-center justify-center rounded-full bg-indigo-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all">
+        Register
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle Button -->
+    <div class="flex items-center md:hidden">
+      <button 
+        type="button" 
+        (click)="toggleMobileMenu()"
+        class="inline-flex items-center justify-center rounded-md p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        
+        <!-- Hamburger Icon (Menu Closed) -->
+        @if (!isMobileMenuOpen) {
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        }
+        
+        <!-- X Icon (Menu Open) -->
+        @if (isMobileMenuOpen) {
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        }
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Dropdown -->
+  @if (isMobileMenuOpen) {
+    <div class="md:hidden absolute left-0 right-0 border-t border-slate-200 bg-white/95 backdrop-blur-md shadow-xl">
+      <div class="space-y-1 px-4 pb-6 pt-4 text-base font-medium">
+        <a routerLink="/conference" routerLinkActive="bg-indigo-50 text-indigo-600" (click)="closeMobileMenu()" class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors">Conference</a>
+        <a routerLink="/ctf" routerLinkActive="bg-indigo-50 text-indigo-600" (click)="closeMobileMenu()" class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors">CTF</a>
+        <a routerLink="/schedule" routerLinkActive="bg-indigo-50 text-indigo-600" (click)="closeMobileMenu()" class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors">Schedule</a>
+        <a routerLink="/speakers" routerLinkActive="bg-indigo-50 text-indigo-600" (click)="closeMobileMenu()" class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors">Speakers</a>
+        <a routerLink="/sponsors" routerLinkActive="bg-indigo-50 text-indigo-600" (click)="closeMobileMenu()" class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors">Sponsors</a>
+        <a routerLink="/faq" routerLinkActive="bg-indigo-50 text-indigo-600" (click)="closeMobileMenu()" class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors">FAQ</a>
+        <a routerLink="/contact" routerLinkActive="bg-indigo-50 text-indigo-600" (click)="closeMobileMenu()" class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors">Contact</a>
+        
+        <!-- Mobile CTA -->
+        <div class="mt-4 border-t border-slate-200 pt-4">
+          <a routerLink="/register" (click)="closeMobileMenu()" class="block w-full rounded-full bg-indigo-600 px-3 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition-colors">
+            Register Now
+          </a>
+        </div>
+      </div>
+    </div>
+  }
 </nav>
