@@ -172,9 +172,11 @@
       </a>
     </div>
     
-    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+    <app-sponsor-grid [sponsors]="sponsors()" [highlightedSponsorIds]="['spon-01', 'spon-02']"></app-sponsor-grid>
+    
+    <!-- <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
       <app-sponsor-grid [sponsors]="sponsors()" [highlightedSponsorIds]="['spon-01', 'spon-02']"></app-sponsor-grid>
-    </div>
+    </div> -->
   </section>
 
 </section>
