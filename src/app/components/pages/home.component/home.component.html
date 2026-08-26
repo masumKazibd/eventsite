@@ -80,15 +80,7 @@
           <!-- Vector graphic for conference -->
           <svg class="w-48 h-48 text-indigo-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
         </div>
-        <div class="relative z-10">
-          <!-- <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-indigo-100 rounded-lg">
-              <svg class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-              </svg>
-            </div>
-            <p class="text-sm font-bold uppercase tracking-wider text-indigo-600">Track</p>
-          </div> -->
+        <div class="relative z-10"> 
           <p class="text-3xl font-extrabold text-slate-900">Conference</p>
           <p class="text-base text-slate-600 font-medium mt-3">Talks, workshops, and live hacking sessions by industry leaders.</p>
           <p>Mor details about conference events will be announced soon.</p>
@@ -98,12 +90,16 @@
             <li>Networking opportunities with peers and industry leaders.</li>  
           </ul>
         </div>
-        <a routerLink="/schedule" class="inline-flex items-center gap-2 text-sm font-bold text-indigo-600 mt-8 relative z-10 hover:text-indigo-800 transition-colors cursor-pointer w-fit">
-          View Schedule <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a>
-          Register Now <span aria-hidden="true">&rarr;</span>
-        </a>
+        <div class="mt-8 flex flex-wrap items-center gap-4 relative z-10">
+          <a routerLink="/schedule" class="group inline-flex items-center gap-2 rounded-xl border border-indigo-200 bg-white/80 backdrop-blur-md px-5 py-2.5 text-sm font-bold text-indigo-600 shadow-sm transition-all duration-300 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-800 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] active:scale-95 cursor-pointer">
+            View Schedule <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-indigo-500 via-indigo-400 to-cyan-400 p-[2px] text-sm font-bold text-white shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-95 cursor-pointer">
+            <span class="inline-flex items-center gap-2 rounded-[10px] bg-slate-900 px-5 py-2.5 transition-all duration-300 group-hover:bg-transparent">
+              Register Now <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+            </span>
+          </a>
+        </div> 
       </div>
 
       <!-- CTF Track -->
@@ -112,15 +108,7 @@
           <!-- Vector graphic for CTF/Hacking -->
           <svg class="w-48 h-48 text-indigo-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
         </div>
-        <div class="relative z-10">
-          <!-- <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-indigo-100 rounded-lg">
-              <svg class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-              </svg>
-            </div>
-            <p class="text-sm font-bold uppercase tracking-wider text-indigo-600">Track</p>
-          </div> -->
+        <div class="relative z-10"> 
           <p class="text-3xl font-extrabold text-slate-900">CTF</p>
           <p class="text-base text-slate-600 font-medium mt-3">Advanced capture-the-flag challenges and competitive team brackets.</p>
           <p>More details about CTF events will be announced soon.</p>
@@ -130,12 +118,16 @@
             <li>Competitive team brackets for top performers.</li>  
           </ul>
         </div>
-        <a routerLink="/rules" class="inline-flex items-center gap-2 text-sm font-bold text-indigo-600 mt-8 relative z-10 hover:text-indigo-800 transition-colors cursor-pointer w-fit">
-          View Rules <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a>
-          Register Now <span aria-hidden="true">&rarr;</span> 
-        </a>
+        <div class="mt-8 flex flex-wrap items-center gap-4 relative z-10">
+          <a routerLink="/rules" class="group inline-flex items-center gap-2 rounded-xl border border-indigo-200 bg-white/80 backdrop-blur-md px-5 py-2.5 text-sm font-bold text-indigo-600 shadow-sm transition-all duration-300 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-800 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] active:scale-95 cursor-pointer">
+            View Rules <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-indigo-500 via-indigo-400 to-cyan-400 p-[2px] text-sm font-bold text-white shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-95 cursor-pointer">
+            <span class="inline-flex items-center gap-2 rounded-[10px] bg-slate-900 px-5 py-2.5 transition-all duration-300 group-hover:bg-transparent">
+              Register Now <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
